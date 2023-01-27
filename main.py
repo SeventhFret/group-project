@@ -26,7 +26,9 @@ while choice != 'x':
 
     choice = input()
     if choice == "1":
-        pass
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
     elif choice == "2":
         pass
     elif choice == "3":
