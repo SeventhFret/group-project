@@ -51,6 +51,7 @@ while choice != 'x':
     elif choice == "8":
         pass
     elif choice == "9":
+        print(pyjokes.get_joke())
         pass
     elif choice == "10":
         pass
