@@ -1,17 +1,8 @@
-
-import datetime # already done
-
-
 from os import system
 from datetime import datetime, timedelta
 import pyjokes
 import calendar
 
-
-
-import calendar
-from datetime import datetime, timedelta
-import pyjokes
 
 # CREATING MENU
 
@@ -43,7 +34,6 @@ while choice != 'x':
         date = datetime.utcnow()
         utc_time = calendar.timegm(date.utctimetuple())
         print("Current time in UNIX format is: ", utc_time)
-        pass
     elif choice == "3":
         pass
     elif choice == "4":
@@ -56,16 +46,14 @@ while choice != 'x':
         print(calendar.month(year,month))
     elif choice == "7":
         year = 2023     
-        if (year % 4 == 0):
+        if year % 4 == 0:
             print("{0} is a leap year".format(year))
         else:
             print("{0} is not a leap year".format(year))
-        pass
     elif choice == "8":
         pass
     elif choice == "9":
         print(pyjokes.get_joke())
-        pass
     elif choice == "10":
         pass
     if choice != 'x':
