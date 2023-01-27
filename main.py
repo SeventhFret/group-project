@@ -44,7 +44,9 @@ while choice != 'x':
     elif choice == "5":
         pass
     elif choice == "6":
-        pass
+        year=int(input("Enter Year: "))
+        month=int(input("Enter Month Number: "))
+        print(calendar.month(year,month))
     elif choice == "7":
         pass
     elif choice == "8":
