@@ -42,7 +42,14 @@ while choice != 'x':
     elif choice == "7":
         pass
     elif choice == "8":
-        pass
+        year = int(input())
+        leap_year = calendar.isleap(year)
+
+        if leap_year == True:
+            year % 4 == 0 and (year % 100 or year % 400 == 0)
+            print(year)
+        else:
+            print([y for y in range(year, year + 4) if calendar.isleap(y)])
     elif choice == "9":
         pass
     elif choice == "10":
