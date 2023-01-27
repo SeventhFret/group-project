@@ -40,7 +40,9 @@ while choice != 'x':
 
     choice = input()
     if choice == "1":
-        pass
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
     elif choice == "2":
         date = datetime.utcnow()
         utc_time = calendar.timegm(date.utctimetuple())
@@ -71,7 +73,3 @@ while choice != 'x':
         continue
     else:
         print('Alright, see you!')
-
-
-
-
