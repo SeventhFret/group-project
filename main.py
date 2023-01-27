@@ -1,12 +1,18 @@
-<<<<<<< HEAD
+
 import datetime # already done
 year = 2023     # already done
 if (year % 4 == 0):
     print("{0} is a leap year".format(year))
 else:
     print("{0} is not a leap year".format(year))
-=======
+
 from os import system
+from datetime import datetime, timedelta
+import pyjokes
+import calendar
+
+
+
 import calendar
 from datetime import datetime, timedelta
 import pyjokes
@@ -36,6 +42,9 @@ while choice != 'x':
     if choice == "1":
         pass
     elif choice == "2":
+        date = datetime.utcnow()
+        utc_time = calendar.timegm(date.utctimetuple())
+        print("Current time in UNIX format is: ", utc_time)
         pass
     elif choice == "3":
         pass
@@ -50,6 +59,7 @@ while choice != 'x':
     elif choice == "8":
         pass
     elif choice == "9":
+        print(pyjokes.get_joke())
         pass
     elif choice == "10":
         pass
@@ -59,4 +69,7 @@ while choice != 'x':
         continue
     else:
         print('Alright, see you!')
->>>>>>> dc26334c9bc05b6e3b7d0da981569acce3174886
+
+
+
+
