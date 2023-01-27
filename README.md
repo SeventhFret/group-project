@@ -6,4 +6,4 @@ Requirements:
 + `datetime`
 + `calender`
 + `os`
-+ `pyjockes`
++ `pyjokes`
