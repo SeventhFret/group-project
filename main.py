@@ -1,10 +1,6 @@
 
 import datetime # already done
-year = 2023     # already done
-if (year % 4 == 0):
-    print("{0} is a leap year".format(year))
-else:
-    print("{0} is not a leap year".format(year))
+
 
 from os import system
 from datetime import datetime, timedelta
@@ -59,6 +55,11 @@ while choice != 'x':
         month=int(input("Enter Month Number: "))
         print(calendar.month(year,month))
     elif choice == "7":
+        year = 2023     
+        if (year % 4 == 0):
+            print("{0} is a leap year".format(year))
+        else:
+            print("{0} is not a leap year".format(year))
         pass
     elif choice == "8":
         pass
