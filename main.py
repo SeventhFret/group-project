@@ -1,8 +1,8 @@
 
 from os import system
-import calendar
 from datetime import datetime, timedelta
-#8import pyjokes
+#import pyjokes
+import calendar
 
 # CREATING MENU
 choice = ''
@@ -26,9 +26,13 @@ while choice != 'x':
 
     choice = input()
     if choice == "1":
-        pass
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
     elif choice == "2":
-        pass
+        date = datetime.utcnow()
+        utc_time = calendar.timegm(date.utctimetuple())
+        print("Current time in UNIX format is: ", utc_time)
     elif choice == "3":
         pass
     elif choice == "4":
@@ -36,7 +40,9 @@ while choice != 'x':
     elif choice == "5":
         pass
     elif choice == "6":
-        pass
+        year=int(input("Enter Year: "))
+        month=int(input("Enter Month Number: "))
+        print(calendar.month(year,month))
     elif choice == "7":
         year = 2023 
         #leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
@@ -46,6 +52,12 @@ while choice != 'x':
             print("{0} is not a leap year".format(year))
         if (year % 4 ==0) and (year % 100 != 0):
             print("{0} is a leap year".format(year))
+
+        year = 2023     
+        if year % 4 == 0:
+            print("{0} is a leap year".format(year))
+        else:
+            print("{0} is not a leap year".format(year))
     elif choice == "8":
         
         #inp_year = int(input("Give year:"))
@@ -57,7 +69,7 @@ while choice != 'x':
             leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
             print(f"The next leap year is {year}")
     elif choice == "9":
-        pass
+        print(pyjokes.get_joke())
     elif choice == "10":
         pass
     if choice != 'x':
@@ -66,4 +78,3 @@ while choice != 'x':
         continue
     else:
         print('Alright, see you!')
-
