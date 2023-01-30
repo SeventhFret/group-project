@@ -44,30 +44,26 @@ while choice != 'x':
         month=int(input("Enter Month Number: "))
         print(calendar.month(year,month))
     elif choice == "7":
-        year = 2023 
-        #leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
+        year = datetime.now().year
         if (year % 4 == 0):
             print("{0} is a leap year".format(year))
         else:
             print("{0} is not a leap year".format(year))
         if (year % 4 ==0) and (year % 100 != 0):
             print("{0} is a leap year".format(year))
-
-        year = 2023     
-        if year % 4 == 0:
-            print("{0} is a leap year".format(year))
-        else:
-            print("{0} is not a leap year".format(year))
-    elif choice == "8":
         
-        #inp_year = int(input("Give year:"))
+    elif choice == "8":
+        inp_year = int(input("Give year:"))
+        year = inp_year
         leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
+
         if leap:
             print(f"The next leap year from {year} is {year + 4}")
+
         while not leap:
             year += 1
             leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
-            print(f"The next leap year is {year}")
+            print(f"The next leap year from {inp_year} is {year}")
     elif choice == "9":
         print(pyjokes.get_joke())
     elif choice == "10":
