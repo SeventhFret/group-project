@@ -30,7 +30,11 @@ while choice != 'x':
     elif choice == "2":
         pass
     elif choice == "3":
-        pass
+        user_data = input('Please, input date in format[DD/MM/YYYY]: ')
+        user_data.replace('/', ' ')
+        
+        user_date = datetime(int(user_data[6:]), int(user_data[3:4]), int(user_data[0:2]))
+        print()
     elif choice == "4":
         pass
     elif choice == "5":
