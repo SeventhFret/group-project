@@ -63,7 +63,7 @@ while choice != 'x':
         if user_format_choice == '1':
             print(result)
         elif user_format_choice == '2':
-            print(result.seconds, 'seconds')
+            print(result.total_seconds(), 'seconds')
         elif user_format_choice == '3':
             print(result.days, 'days')
         elif user_format_choice == '4':
