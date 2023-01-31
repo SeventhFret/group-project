@@ -2,6 +2,7 @@ from os import system
 from datetime import datetime, timedelta
 import pyjokes
 import calendar
+import time
 
 # CREATING MENU
 choice = ''
@@ -68,7 +69,13 @@ while choice != 'x':
     elif choice == "9":
         print(pyjokes.get_joke())
     elif choice == "10":
-        pass
+        while True:
+            system('clear')
+            print('CLOCK'.center(50, '='), end='\n\n')
+            print(datetime.now().strftime('%H:%M:%S').center(48, ' '), end='\n\n')
+            print('='.center(50, '='))
+            time.sleep(1)
+
     if choice != 'x':
         print('Press Enter to proceed...')
         input()
