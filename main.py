@@ -75,6 +75,7 @@ while choice != 'x':
             print(datetime.now().strftime('%H:%M:%S').center(48, ' '), end='\n\n')
             print('='.center(50, '='))
             time.sleep(1)
+        pass
 
     if choice != 'x':
         print('Press Enter to proceed...')
