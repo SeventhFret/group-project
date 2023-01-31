@@ -3,7 +3,7 @@ Team project for DCI.
 
 Requirements: 
 
-+ `datetime`
++ `datetime`, `timedelta`
 + `calender`
 + `os`
 + `pyjokes`
