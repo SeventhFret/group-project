@@ -28,22 +28,35 @@ while choice != 'x':
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         print("Current Time =", current_time)
+    
     elif choice == "2":
         date = datetime.utcnow()
         utc_time = calendar.timegm(date.utctimetuple())
         print("Current time in UNIX format is: ", utc_time)
+
     elif choice == "3":
         print('Please, input date with the following.\n')
         print('\nYour datatime object looks like this:',datetime(int(input('Insert year: ')), int(input('Insert month: ')), int(input('Insert day: ')), int(input('Inset hour: ')), int(input('Insert minutes: '))))
         print()
-    elif choice == "4":
+    
+    elif choice == "4": 
+        year=int(input("Enter year: "))
+        month=int(input("Enter month: "))
+        day=int(input("Enter day: "))
+        future_time = datetime(year, month, day)
+        today=datetime.now()
+        time_difference = future_time - today
+        print("Time until ", future_time, "is ", time_difference)
         pass
+    
     elif choice == "5":
         pass
+    
     elif choice == "6":
         year=int(input("Enter Year: "))
         month=int(input("Enter Month Number: "))
         print(calendar.month(year,month))
+   
     elif choice == "7":
         year = datetime.now().year
         if (year % 4 == 0):
@@ -65,10 +78,13 @@ while choice != 'x':
             year += 1
             leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
             print(f"The next leap year from {inp_year} is {year}")
+    
     elif choice == "9":
         print(pyjokes.get_joke())
+    
     elif choice == "10":
         pass
+    
     if choice != 'x':
         print('Press Enter to proceed...')
         input()
