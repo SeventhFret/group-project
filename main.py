@@ -80,7 +80,7 @@ while choice != 'x':
             print(f"The next leap year from {inp_year} is {year}")
     
     elif choice == "9":
-        print(pyjokes.get_joke())
+        print(pyjokes.get_joke(), end='\n\n')
     
     elif choice == "10":
         while True:
