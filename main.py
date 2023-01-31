@@ -34,7 +34,11 @@ while choice != 'x':
         utc_time = calendar.timegm(date.utctimetuple())
         print("Current time in UNIX format is: ", utc_time)
     elif choice == "3":
-        pass
+        user_data = input('Please, input date in format[DD/MM/YYYY]: ')
+        user_data.replace('/', ' ')
+        
+        user_date = datetime(int(user_data[6:]), int(user_data[3:4]), int(user_data[0:2]))
+        print()
     elif choice == "4":
         pass
     elif choice == "5":
