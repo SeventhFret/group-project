@@ -1,20 +1,10 @@
 
-import datetime # already done
-
-
 from os import system
 from datetime import datetime, timedelta
-import pyjokes
+#import pyjokes
 import calendar
-
-
-
-import calendar
-from datetime import datetime, timedelta
-import pyjokes
 
 # CREATING MENU
-
 choice = ''
 
 while choice != 'x':
@@ -43,9 +33,12 @@ while choice != 'x':
         date = datetime.utcnow()
         utc_time = calendar.timegm(date.utctimetuple())
         print("Current time in UNIX format is: ", utc_time)
-        pass
     elif choice == "3":
-        pass
+        user_data = input('Please, input date in format[DD/MM/YYYY]: ')
+        user_data.replace('/', ' ')
+        
+        user_date = datetime(int(user_data[6:]), int(user_data[3:4]), int(user_data[0:2]))
+        print()
     elif choice == "4":
         pass
     elif choice == "5":
@@ -55,24 +48,28 @@ while choice != 'x':
         month=int(input("Enter Month Number: "))
         print(calendar.month(year,month))
     elif choice == "7":
-        year = 2023     
+        year = datetime.now().year
         if (year % 4 == 0):
             print("{0} is a leap year".format(year))
         else:
             print("{0} is not a leap year".format(year))
-        pass
+        if (year % 4 ==0) and (year % 100 != 0):
+            print("{0} is a leap year".format(year))
+        
     elif choice == "8":
-        year = int(input())
-        leap_year = calendar.isleap(year)
+        inp_year = int(input("Give year:"))
+        year = inp_year
+        leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
 
-        if leap_year == True:
-            year % 4 == 0 and (year % 100 or year % 400 == 0)
-            print(year)
-        else:
-            print([y for y in range(year, year + 4) if calendar.isleap(y)])
+        if leap:
+            print(f"The next leap year from {year} is {year + 4}")
+
+        while not leap:
+            year += 1
+            leap = year % 4 == 0 and year %100 != 0 or year % 100 == 0 and year % 400 == 0
+            print(f"The next leap year from {inp_year} is {year}")
     elif choice == "9":
         print(pyjokes.get_joke())
-        pass
     elif choice == "10":
         pass
     if choice != 'x':
