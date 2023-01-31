@@ -3,7 +3,7 @@ Team project for DCI.
 
 ![Program menu](./Program%20menu%20screenshot.png)
 
-What this program can do?
+## What this program can do?
 
 + Display current time
 + Display current time in UNIX format
@@ -16,7 +16,11 @@ What this program can do?
 + Random joke
 + Real-time clock
 
-Requirements: 
+## Code
+
+![Code pic](./code.png)
+
+## Requirements: 
 
 + `datetime`, `timedelta`
 + `calender`
