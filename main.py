@@ -50,8 +50,27 @@ while choice != 'x':
         print("Time until ", future_time, "is ", time_difference)
     
     elif choice == "5":
-        pass
-    
+        print('Insert the date of future event with next inputs.')
+        delta_end_date = datetime(int(input('Insert year: ')), int(input('Insert month: ')), int(input('Insert day: ')), int(input('Inset hour: ')), int(input('Insert minutes: ')))
+        time_now = datetime.now()
+        user_format_choice = input('''In which format do you want to see result?
+[1] - Full format
+[2] - Only seconds
+[3] - Only days
+[4] - Only years
+''')
+        result = delta_end_date - datetime.now()
+        if user_format_choice == '1':
+            print(result)
+        elif user_format_choice == '2':
+            print(result.seconds, 'seconds')
+        elif user_format_choice == '3':
+            print(result.days, 'days')
+        elif user_format_choice == '4':
+            if result.days < 365:
+                print('0 years')
+            else:
+                print(result.days // 366, 'years')
     elif choice == "6":
         year=int(input("Enter Year: "))
         month=int(input("Enter Month Number: "))
