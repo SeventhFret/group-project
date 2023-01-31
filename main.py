@@ -1,7 +1,6 @@
-
 from os import system
 from datetime import datetime, timedelta
-#import pyjokes
+import pyjokes
 import calendar
 
 # CREATING MENU
@@ -34,10 +33,8 @@ while choice != 'x':
         utc_time = calendar.timegm(date.utctimetuple())
         print("Current time in UNIX format is: ", utc_time)
     elif choice == "3":
-        user_data = input('Please, input date in format[DD/MM/YYYY]: ')
-        user_data.replace('/', ' ')
-        
-        user_date = datetime(int(user_data[6:]), int(user_data[3:4]), int(user_data[0:2]))
+        print('Please, input date with the following.\n')
+        print('\nYour datatime object looks like this:',datetime(int(input('Insert year: ')), int(input('Insert month: ')), int(input('Insert day: ')), int(input('Inset hour: ')), int(input('Insert minutes: '))))
         print()
     elif choice == "4":
         pass
