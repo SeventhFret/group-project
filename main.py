@@ -48,7 +48,6 @@ while choice != 'x':
         today=datetime.now()
         time_difference = future_time - today
         print("Time until ", future_time, "is ", time_difference)
-        pass
     
     elif choice == "5":
         pass
@@ -90,7 +89,6 @@ while choice != 'x':
             print(datetime.now().strftime('%H:%M:%S').center(48, ' '), end='\n\n')
             print('='.center(50, '='))
             time.sleep(1)
-        pass
 
     if choice != 'x':
         print('Press Enter to proceed...')
