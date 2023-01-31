@@ -1,6 +1,16 @@
 # First group project
 Team project for DCI.
 
+## Main point of project
+
+**Create Python program which:**
+- has a menu 
+- takes multiple user inputs and displays time in various aspects.
+- is able to put out random joke
+- has an additional surprise feature  
+
+
+## Program show-up
 ![Program menu](./Program%20menu%20screenshot.png)
 
 ## What this program can do?
@@ -16,7 +26,7 @@ Team project for DCI.
 + Random joke
 + Real-time clock
 
-## Code
+## Code show-up
 
 ![Code pic](./code.png)
 
