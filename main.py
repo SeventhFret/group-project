@@ -1,7 +1,7 @@
 
 from os import system
 from datetime import datetime, timedelta
-#import pyjokes
+import pyjokes
 import calendar
 
 # CREATING MENU
@@ -33,9 +33,17 @@ while choice != 'x':
         date = datetime.utcnow()
         utc_time = calendar.timegm(date.utctimetuple())
         print("Current time in UNIX format is: ", utc_time)
-    elif choice == "3":
+    
+    elif choice == "3":         
         pass
-    elif choice == "4":
+    elif choice == "4": 
+        year=int(input("Enter year: "))
+        month=int(input("Enter month: "))
+        day=int(input("Enter day: "))
+        future_time = datetime(year, month, day)
+        today=datetime.now()
+        time_difference = future_time - today
+        print("Time until ", future_time, "is ", time_difference)
         pass
     elif choice == "5":
         pass
